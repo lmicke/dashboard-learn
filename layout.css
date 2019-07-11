@@ -1,0 +1,29 @@
+html, body, .grid-container { height: 100%; margin: 0; }
+
+.grid-container * { 
+ /*border: 1px solid red;*/
+ position: relative;
+}
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 0.5fr;
+  grid-template-areas: "Head Head Head Head Head Head Head" "Nav Graph-1 Graph-1 Graph-1 Orders Orders Orders" "Nav Graph-1 Graph-1 Graph-1 Orders Orders Orders" "Nav Delivery Delivery Delivery Graph-2 Graph-2 Graph-2" "Nav Delivery Delivery Delivery Graph-2 Graph-2 Graph-2" "Nav Footer Footer Footer Footer Footer Footer";
+}
+
+.Head { grid-area: Head; }
+
+.Nav { grid-area: Nav; }
+
+.Footer { grid-area: Footer; }
+
+.Graph-1 { grid-area: Graph-1; }
+
+.Graph-2 { grid-area: Graph-2; }
+
+.Orders { grid-area: Orders; }
+
+.Delivery { grid-area: Delivery; }
