@@ -14,13 +14,51 @@ html, body, .grid-container { height: 100%; margin: 0; }
   grid-template-areas: "Head Head Head Head Head Head Head" "Nav Graph-1 Graph-1 Graph-1 Orders Orders Orders" "Nav Graph-1 Graph-1 Graph-1 Orders Orders Orders" "Nav Delivery Delivery Delivery Graph-2 Graph-2 Graph-2" "Nav Delivery Delivery Delivery Graph-2 Graph-2 Graph-2" "Nav Footer Footer Footer Footer Footer Footer";
 }
 
-.Head { grid-area: Head; }
 
-.Nav { grid-area: Nav; }
+.Head { 
+  grid-area: Head;
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    background-color: azure;
+}
+.Nav { 
+  grid-area: Nav;
+  background-color: azure;
+  display: flex; /* Will be hidden on mobile */
+  flex-direction: column;
+ }
+ 
+ .sidenav__list {
+  padding: 0;
+  margin-top: 85px;
+  list-style-type: none;
+}
+.sidenav__list-item {
+  padding: 20px 20px 20px 40px;
+  color: black;
+}
+.sidenav__list-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
 
-.Footer { grid-area: Footer; }
+.Footer { 
+  grid-area: Footer;
+  background-color: azure;
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
 
-.Graph-1 { grid-area: Graph-1; }
+ }
+
+.Graph-1 { 
+  grid-area: Graph-1; 
+  background-origin: padding-box;
+
+}
 
 .Graph-2 { grid-area: Graph-2; }
 
